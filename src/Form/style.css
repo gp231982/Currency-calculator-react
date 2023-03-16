@@ -1,0 +1,62 @@
+.form {
+  display: block;
+}
+
+.form__fieldset {
+  border-radius: 20px;
+  font-size: 20px;
+  border-color: silver;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.form__result {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.form__header {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: cadetblue;
+}
+
+.form__calculationButton {
+  padding: 10px 40px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  width: 200px;
+  font-weight: bold;
+}
+
+.form__calculationButton:hover {
+  cursor: pointer;
+  outline: 3px solid whitesmoke;
+  border-radius: 15px;
+  color: white;
+  background-color: teal;
+}
+
+.form__calculationButton--disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.form__resetButton {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 40px;
+  border-radius: 5px;
+  letter-spacing: 2.5px;
+  width: 200px;
+  font-weight: bold;
+}
+
+.form__resetButton:hover {
+  outline: 3px solid whitesmoke;
+  background-color: teal;
+  color: whitesmoke;
+  border-radius: 15px;
+  cursor: pointer;
+}

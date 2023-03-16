@@ -1,0 +1,10 @@
+.form__li {
+  padding: 20px;
+}
+
+.form__labelText {
+  margin: 10px;
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+}
