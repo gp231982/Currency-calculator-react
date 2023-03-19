@@ -3,10 +3,10 @@ import "./style.css";
 const TableBodyRowItem = ({ item, index }) => {
   return (
     <>
-      <td key={index} className="table__cell">
+      <td key={index} className="tableBodyRowItem">
         {item.currencyPair}
       </td>
-      <td key={index} className="table__cell">
+      <td key={index} className="tableBodyRowItem">
         {item.exchangeRate}
       </td>
     </>

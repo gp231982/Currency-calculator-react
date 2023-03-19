@@ -5,7 +5,7 @@ import Select from "../Select";
 import "./style.css";
 
 const FormItemsList = () => (
-  <ul className="form__ul">
+  <ul className="formItemsList__ul">
     <InputListItem
       labelText={"money"}
       spanText={"Wpisz kwotę*"}
@@ -36,7 +36,6 @@ const FormItemsList = () => (
       spanText={"Wybierz aktualny kurs (z tabeli )*"}
       input={
         <Input
-          className="form__field"
           id="currencyRatio"
           type="number"
           min="0.0001"

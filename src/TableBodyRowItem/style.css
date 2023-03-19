@@ -1,9 +1,9 @@
-.table__cell {
+.tableBodyRowItem {
   padding: 20px;
   border: 1px solid black;
 }
 
-.table__cell:hover {
+.tableBodyRowItem:hover {
   cursor: pointer;
   background-color: rgb(211, 207, 207);
 }

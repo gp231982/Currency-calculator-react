@@ -1,9 +1,9 @@
 import "./style.css";
 
 const InputListItem = ({ labelText, spanText, input }) => (
-  <li className="form__li">
+  <li className="inputListItem">
     <label for={labelText}>
-      <span className="form__labelText">{spanText}</span>
+      <span className="inputListItem__labelText">{spanText}</span>
       {input}
     </label>
   </li>

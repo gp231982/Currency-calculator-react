@@ -1,9 +1,9 @@
 import "./style.css";
 
 const SelectListItem = ({ labelText, spanText, select }) => (
-  <li className="form__li">
+  <li className="selectListItem">
     <label for={labelText}>
-      <span className="form__labelText">{spanText}</span>
+      <span className="selectListItem__labelText">{spanText}</span>
       {select}
     </label>
   </li>

@@ -6,7 +6,7 @@ const Input = ({ id, type, min, step, placeholder, autofocus, readonly }) => {
 
   return (
     <input
-      className="form__field"
+      className="input"
       value={newValue}
       onChange={(e) => setNewValue(e.target.value)}
       id={id}

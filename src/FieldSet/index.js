@@ -1,9 +1,9 @@
 import "./style.css";
 
 const FieldSet = ({ children }) => (
-  <fieldset className="form__fieldset">
+  <fieldset className="fieldset">
     <legend>
-      <h2 className="form__header">Kalkulator walut</h2>
+      <h2 className="fieldset__header">Kalkulator walut</h2>
     </legend>
     <h3>Wymagane pola zazanczone są z "*"</h3>
     {children}
