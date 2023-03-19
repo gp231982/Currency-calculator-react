@@ -2,13 +2,12 @@ import MainContainer from "./MainContainer";
 import Form from "./Form";
 import TableContainer from "./TableContainer";
 import Table from "./Table";
-import FormItemsList from "./FormItemsList";
 
 function App() {
   return (
     <div className="App">
       <MainContainer>
-        <Form children={<FormItemsList />} />
+        <Form />
         <TableContainer>
           <Table />
         </TableContainer>

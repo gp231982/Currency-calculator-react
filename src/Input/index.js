@@ -1,7 +1,7 @@
 import "./style.css";
 import { useState } from "react";
 
-const Input = ({ className, id, type, min, step, placeholder, autofocus }) => {
+const Input = ({ id, type, min, step, placeholder, autofocus, readonly }) => {
   const [newValue, setNewValue] = useState("");
 
   return (
@@ -16,6 +16,7 @@ const Input = ({ className, id, type, min, step, placeholder, autofocus }) => {
       placeholder={placeholder}
       required
       autoFocus={autofocus}
+      readOnly={readonly}
     />
   );
 };

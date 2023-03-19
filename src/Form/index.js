@@ -1,14 +1,12 @@
 import "./style.css";
 import Button from "../Button";
+import FieldSet from "../FieldSet";
+import FormItemsList from "../FormItemsList";
 
-const Form = ({ children }) => (
-  <form className="form" action="">
-    <fieldset className="form__fieldset">
-      <legend>
-        <h2 className="form__header">Kalkulator walut</h2>
-      </legend>
-      <h3>Wymagana pola zazanczone są z "*"</h3>
-      {children}
+const Form = () => (
+  <form className="form">
+    <FieldSet>
+      <FormItemsList />
       {
         <Button
           type="submit"
@@ -24,7 +22,7 @@ const Form = ({ children }) => (
           textContent="Reset"
         />
       }
-    </fieldset>
+    </FieldSet>
   </form>
 );
 

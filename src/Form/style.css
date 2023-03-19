@@ -2,23 +2,9 @@
   display: block;
 }
 
-.form__fieldset {
-  border-radius: 20px;
-  font-size: 20px;
-  border-color: silver;
-  margin: 0 auto;
-  width: 100%;
-}
-
 .form__result {
   font-size: 30px;
   font-weight: bold;
-}
-
-.form__header {
-  padding: 20px;
-  border-radius: 20px;
-  background-color: cadetblue;
 }
 
 .form__calculationButton {

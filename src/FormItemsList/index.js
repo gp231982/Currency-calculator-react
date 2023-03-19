@@ -11,7 +11,7 @@ const FormItemsList = () => (
       spanText={"Wpisz kwotę*"}
       input={
         <Input
-          value={"1"}
+          value={""}
           id={"money"}
           type={"number"}
           min={"1"}
@@ -42,8 +42,7 @@ const FormItemsList = () => (
           min="0.0001"
           step="0.0001"
           placeholder="Wybierz kurs z tabeli kursów walut"
-          readOnly
-          focus={false}
+          readonly={true}
         />
       }
     />
