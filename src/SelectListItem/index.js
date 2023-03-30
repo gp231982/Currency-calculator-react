@@ -1,8 +1,8 @@
 import "./style.css";
 
-const SelectListItem = ({ labelText, spanText, select }) => (
+const SelectListItem = ({ spanText, select }) => (
   <li className="selectListItem">
-    <label for={labelText}>
+    <label>
       <span className="selectListItem__labelText">{spanText}</span>
       {select}
     </label>

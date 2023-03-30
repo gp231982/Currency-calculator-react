@@ -2,8 +2,8 @@ import "./style.css";
 
 const TableHeaderItem = () => (
   <>
-    <th class="tableHeaderItem">Para</th>
-    <th class="tableHeaderItem">Kurs</th>
+    <th className="tableHeaderItem">Para</th>
+    <th className="tableHeaderItem">Kurs</th>
   </>
 );
 

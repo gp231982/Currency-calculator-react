@@ -1,8 +1,8 @@
 import "./style.css";
 
-const InputListItem = ({ labelText, spanText, input }) => (
+const InputListItem = ({ spanText, input }) => (
   <li className="inputListItem">
-    <label for={labelText}>
+    <label>
       <span className="inputListItem__labelText">{spanText}</span>
       {input}
     </label>

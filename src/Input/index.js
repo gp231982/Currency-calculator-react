@@ -1,14 +1,27 @@
 import "./style.css";
-import { useState } from "react";
 
-const Input = ({ id, type, min, step, placeholder, autofocus, readonly }) => {
-  const [newValue, setNewValue] = useState("");
-
+const Input = ({
+  id,
+  type,
+  min,
+  step,
+  placeholder,
+  autofocus,
+  readonly,
+  exchangeRate,
+  handleInputMoneyChange,
+  moneyAmount,
+}) => {
   return (
     <input
-      className="input"
-      value={newValue}
-      onChange={(e) => setNewValue(e.target.value)}
+      className={`input ${
+        (id === "currencyRatio" && exchangeRate !== "") ||
+        (id === "money" && moneyAmount !== "")
+          ? "active"
+          : ""
+      }`}
+      value={`${id === "currencyRatio" ? exchangeRate : moneyAmount}`}
+      onChange={(e) => handleInputMoneyChange(e.target.value)}
       id={id}
       type={type}
       min={min}

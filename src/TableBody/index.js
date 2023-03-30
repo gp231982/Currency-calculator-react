@@ -1,12 +1,76 @@
 import TableBodyRow from "../TableBodyRow";
 
-const TableBody = () => (
+const TableBody = ({
+  exchangeRate,
+  changeFormValues,
+  selectFrom,
+  selectTo,
+  selectedFrom,
+  selectedTo,
+  active,
+  tdItems,
+  tableBodyRows,
+}) => (
   <tbody>
-    <TableBodyRow index={0} />
-    <TableBodyRow index={1} />
-    <TableBodyRow index={2} />
-    <TableBodyRow index={3} />
-    <TableBodyRow index={4} />
+    <TableBodyRow
+      changeFormValues={changeFormValues}
+      exchangeRate={exchangeRate}
+      selectFrom={selectFrom}
+      selectTo={selectTo}
+      selectedFrom={selectedFrom}
+      selectedTo={selectedTo}
+      active={active}
+      index={0}
+      tdItems={tdItems}
+      tableBodyRows={tableBodyRows}
+    />
+    <TableBodyRow
+      changeFormValues={changeFormValues}
+      exchangeRate={exchangeRate}
+      selectFrom={selectFrom}
+      selectTo={selectTo}
+      selectedFrom={selectedFrom}
+      selectedTo={selectedTo}
+      active={active}
+      index={1}
+      tdItems={tdItems}
+      tableBodyRows={tableBodyRows}
+    />
+    <TableBodyRow
+      changeFormValues={changeFormValues}
+      exchangeRate={exchangeRate}
+      selectFrom={selectFrom}
+      selectTo={selectTo}
+      selectedFrom={selectedFrom}
+      selectedTo={selectedTo}
+      active={active}
+      index={2}
+      tdItems={tdItems}
+      tableBodyRows={tableBodyRows}
+    />
+    <TableBodyRow
+      changeFormValues={changeFormValues}
+      exchangeRate={exchangeRate}
+      selectFrom={selectFrom}
+      selectTo={selectTo}
+      selectedFrom={selectedFrom}
+      selectedTo={selectedTo}
+      active={active}
+      index={3}
+      tableBodyRows={tableBodyRows}
+    />
+    <TableBodyRow
+      changeFormValues={changeFormValues}
+      exchangeRate={exchangeRate}
+      selectFrom={selectFrom}
+      selectTo={selectTo}
+      selectedFrom={selectedFrom}
+      selectedTo={selectedTo}
+      active={active}
+      index={4}
+      tdItems={tdItems}
+      tableBodyRows={tableBodyRows}
+    />
   </tbody>
 );
 
