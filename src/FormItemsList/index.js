@@ -11,11 +11,11 @@ const FormItemsList = ({
   selectedFrom,
   selectedTo,
   exchangeRate,
-  selectFrom,
-  selectTo,
+  tableDataFrom,
+  tableDataTo,
   active,
-  classNameSelectFrom,
-  classNameSelectTo,
+  classNametableDataFrom,
+  classNametableDataTo,
   currencies,
   moneyAmount,
 }) => (
@@ -42,19 +42,19 @@ const FormItemsList = ({
       select={
         <Select
           exchangeRate={exchangeRate}
-          selectFrom={selectFrom}
-          selectTo={selectTo}
+          tableDataFrom={tableDataFrom}
+          tableDataTo={tableDataTo}
           id={"currencyFrom"}
           handleSelectCurrencyFromChange={handleSelectCurrencyFromChange}
           selectedFrom={selectedFrom}
           active={active}
-          classNameSelectFrom={classNameSelectFrom}
-          classNameSelectTo={classNameSelectTo}
+          classNametableDataFrom={classNametableDataFrom}
+          classNametableDataTo={classNametableDataTo}
           currencies={currencies}
         />
       }
-      selectFrom={selectFrom}
-      selectTo={selectTo}
+      tableDataFrom={tableDataFrom}
+      tableDataTo={tableDataTo}
     />
     <SelectListItem
       labelText={"currencyTo"}
@@ -62,19 +62,19 @@ const FormItemsList = ({
       select={
         <Select
           exchangeRate={exchangeRate}
-          selectFrom={selectFrom}
-          selectTo={selectTo}
+          tableDataFrom={tableDataFrom}
+          tableDataTo={tableDataTo}
           id={"currencyTo"}
           handleSelectCurrencyToChange={handleSelectCurrencyToChange}
           selectedTo={selectedTo}
           active={active}
-          classNameSelectFrom={classNameSelectFrom}
-          classNameSelectTo={classNameSelectTo}
+          classNametableDataFrom={classNametableDataFrom}
+          classNametableDataTo={classNametableDataTo}
           currencies={currencies}
         />
       }
-      selectFrom={selectFrom}
-      selectTo={selectTo}
+      tableDataFrom={tableDataFrom}
+      tableDataTo={tableDataTo}
     />
     <InputListItem
       labelText={"currencyRatio"}

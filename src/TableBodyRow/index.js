@@ -4,8 +4,8 @@ const TableBodyRow = ({
   index,
   exchangeRate,
   changeFormValues,
-  selectFrom,
-  selectTo,
+  tableDataFrom,
+  tableDataTo,
   selectedFrom,
   selectedTo,
   active,
@@ -19,8 +19,8 @@ const TableBodyRow = ({
       <TableBodyRowItem
         changeFormValues={changeFormValues}
         exchangeRate={exchangeRate}
-        selectFrom={selectFrom}
-        selectTo={selectTo}
+        tableDataFrom={tableDataFrom}
+        tableDataTo={tableDataTo}
         selectedFrom={selectedFrom}
         selectedTo={selectedTo}
         item={item}

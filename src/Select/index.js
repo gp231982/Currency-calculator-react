@@ -7,10 +7,10 @@ const Select = ({
   selectedFrom,
   selectedTo,
   id,
-  selectFrom,
-  selectTo,
-  classNameSelectFrom,
-  classNameSelectTo,
+  tableDataFrom,
+  tableDataTo,
+  classNametableDataFrom,
+  classNametableDataTo,
   currencies,
 }) => {
   return (
@@ -18,9 +18,9 @@ const Select = ({
       value={id === "currencyFrom" ? selectedFrom : selectedTo}
       className={`select ${
         id === "currencyFrom"
-          ? classNameSelectFrom
+          ? classNametableDataFrom
           : id === "currencyTo"
-          ? classNameSelectTo
+          ? classNametableDataTo
           : ""
       }`}
       required
@@ -35,8 +35,8 @@ const Select = ({
       {
         <Currencies
           id={id}
-          selectFrom={selectFrom}
-          selectTo={selectTo}
+          tableDataFrom={tableDataFrom}
+          tableDataTo={tableDataTo}
           currencies={currencies}
         />
       }

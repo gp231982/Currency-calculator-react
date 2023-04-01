@@ -3,8 +3,8 @@ import TableBodyRow from "../TableBodyRow";
 const TableBody = ({
   exchangeRate,
   changeFormValues,
-  selectFrom,
-  selectTo,
+  tableDataFrom,
+  tableDataTo,
   selectedFrom,
   selectedTo,
   active,
@@ -15,8 +15,8 @@ const TableBody = ({
     <TableBodyRow
       changeFormValues={changeFormValues}
       exchangeRate={exchangeRate}
-      selectFrom={selectFrom}
-      selectTo={selectTo}
+      tableDataFrom={tableDataFrom}
+      tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
       active={active}
@@ -27,8 +27,8 @@ const TableBody = ({
     <TableBodyRow
       changeFormValues={changeFormValues}
       exchangeRate={exchangeRate}
-      selectFrom={selectFrom}
-      selectTo={selectTo}
+      tableDataFrom={tableDataFrom}
+      tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
       active={active}
@@ -39,8 +39,8 @@ const TableBody = ({
     <TableBodyRow
       changeFormValues={changeFormValues}
       exchangeRate={exchangeRate}
-      selectFrom={selectFrom}
-      selectTo={selectTo}
+      tableDataFrom={tableDataFrom}
+      tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
       active={active}
@@ -51,8 +51,8 @@ const TableBody = ({
     <TableBodyRow
       changeFormValues={changeFormValues}
       exchangeRate={exchangeRate}
-      selectFrom={selectFrom}
-      selectTo={selectTo}
+      tableDataFrom={tableDataFrom}
+      tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
       active={active}
@@ -62,8 +62,8 @@ const TableBody = ({
     <TableBodyRow
       changeFormValues={changeFormValues}
       exchangeRate={exchangeRate}
-      selectFrom={selectFrom}
-      selectTo={selectTo}
+      tableDataFrom={tableDataFrom}
+      tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
       active={active}

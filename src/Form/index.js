@@ -10,13 +10,13 @@ const Form = ({
   changeFormValues,
   calculateResult,
   exchangeRate,
-  selectFrom,
-  selectTo,
+  tableDataFrom,
+  tableDataTo,
   selectedFrom,
   selectedTo,
   active,
-  classNameSelectFrom,
-  classNameSelectTo,
+  classNametableDataFrom,
+  classNametableDataTo,
   currencies,
   moneyAmount,
   result,
@@ -27,16 +27,16 @@ const Form = ({
       <FormItemsList
         changeFormValues={changeFormValues}
         exchangeRate={exchangeRate}
-        selectFrom={selectFrom}
-        selectTo={selectTo}
+        tableDataFrom={tableDataFrom}
+        tableDataTo={tableDataTo}
         handleSelectCurrencyFromChange={handleSelectCurrencyFromChange}
         handleSelectCurrencyToChange={handleSelectCurrencyToChange}
         handleInputMoneyChange={handleInputMoneyChange}
         selectedFrom={selectedFrom}
         selectedTo={selectedTo}
         active={active}
-        classNameSelectFrom={classNameSelectFrom}
-        classNameSelectTo={classNameSelectTo}
+        classNametableDataFrom={classNametableDataFrom}
+        classNametableDataTo={classNametableDataTo}
         currencies={currencies}
         moneyAmount={moneyAmount}
         calculateResult={calculateResult}
@@ -47,7 +47,7 @@ const Form = ({
           result={result}
           type="submit"
           className={`form__calculationButton ${
-            (moneyAmount && selectFrom && selectTo && exchangeRate) !== ""
+            (moneyAmount && tableDataFrom && tableDataTo && exchangeRate) !== ""
               ? ""
               : "form__calculationButton--disabled"
           }`}

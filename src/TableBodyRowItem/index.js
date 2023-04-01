@@ -1,8 +1,8 @@
 import "./style.css";
 
 const TableBodyRowItem = ({
-  selectFrom,
-  selectTo,
+  tableDataFrom,
+  tableDataTo,
   selectedFrom,
   selectedTo,
   item,

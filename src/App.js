@@ -7,14 +7,14 @@ import { useState } from "react";
 
 function App() {
   const [exchangeRate, setExchangeRate] = useState("");
-  const [selectFrom, setSelectFrom] = useState("");
-  const [selectTo, setSelectTo] = useState("");
+  const [tableDataFrom, settableDataFrom] = useState("");
+  const [tableDataTo, settableDataTo] = useState("");
   const [active, setActive] = useState(false);
   const [selectedFrom, setSelectedFrom] = useState("");
   const [selectedTo, setSelectedTo] = useState("");
   const [tdItems, settdItems] = useState([]);
-  const [classNameSelectFrom, setClassNameSelectFrom] = useState("");
-  const [classNameSelectTo, setClassNameSelectTo] = useState("");
+  const [classNametableDataFrom, setClassNametableDataFrom] = useState("");
+  const [classNametableDataTo, setClassNametableDataTo] = useState("");
   const [moneyAmount, setMoneyAmount] = useState("");
   const [result, setResult] = useState("");
 
@@ -68,20 +68,20 @@ function App() {
   const changeFormValues = (
     target,
     exchangeRate,
-    selectFrom,
-    selectTo,
+    tableDataFrom,
+    tableDataTo,
     item
   ) => {
     setExchangeRate(exchangeRate);
-    setSelectFrom(selectFrom);
-    setSelectTo(selectTo);
-    setSelectedFrom(selectFrom);
-    setSelectedTo(selectTo);
+    settableDataFrom(tableDataFrom);
+    settableDataTo(tableDataTo);
+    setSelectedFrom(tableDataFrom);
+    setSelectedTo(tableDataTo);
     setActive((active) => true);
     settdItems((tdItems) => [...tdItems, target]);
     target.classList.add("active");
-    setClassNameSelectFrom("active");
-    setClassNameSelectTo("active");
+    setClassNametableDataFrom("active");
+    setClassNametableDataTo("active");
 
     if (tdItems.length === 1) {
       if (tdItems[0] === target) {
@@ -99,7 +99,7 @@ function App() {
       item = null;
     });
     settdItems((tdItems) => []);
-    setSelectFrom(selectedFrom);
+    settableDataFrom(selectedFrom);
     setSelectedFrom(selectedFrom);
     let activeTd = tdArray.filter(
       (td) => td.id === selectedFrom + "/" + selectedTo
@@ -121,12 +121,12 @@ function App() {
 
     if (selectedFrom === "") {
       setActive((active) => false);
-      setClassNameSelectFrom("");
+      setClassNametableDataFrom("");
     }
 
     if (selectedFrom !== "") {
       setActive((active) => true);
-      setClassNameSelectFrom("active");
+      setClassNametableDataFrom("active");
       settdItems((tdItems) => []);
     }
   };
@@ -138,7 +138,7 @@ function App() {
     });
 
     settdItems((tdItems) => []);
-    setSelectTo(selectedTo);
+    settableDataTo(selectedTo);
     setSelectedTo(selectedTo);
     let activeTd = tdArray.filter(
       (td) => td.id === selectedFrom + "/" + selectedTo
@@ -160,10 +160,10 @@ function App() {
 
     if (selectedTo === "") {
       setActive((active) => false);
-      setClassNameSelectTo("");
+      setClassNametableDataTo("");
     }
     if (selectedTo !== "") {
-      setClassNameSelectTo("active");
+      setClassNametableDataTo("active");
       setActive((active) => true);
       settdItems((tdItems) => []);
     }
@@ -175,20 +175,20 @@ function App() {
 
   const calculateResult = (e) => {
     e.preventDefault();
-    const calculation = `Za ${moneyAmount} ${selectFrom} kupisz ${(
+    const calculation = `Za ${moneyAmount} ${tableDataFrom} kupisz ${(
       moneyAmount * exchangeRate
-    ).toFixed(2)} ${selectTo}`;
+    ).toFixed(2)} ${tableDataTo}`;
     setResult(calculation);
   };
 
   const resetCalculator = () => {
     setMoneyAmount("");
-    setSelectFrom("");
-    setSelectTo("");
+    settableDataFrom("");
+    settableDataTo("");
     setSelectedFrom("");
     setSelectedTo("");
-    setClassNameSelectFrom("");
-    setClassNameSelectTo("");
+    setClassNametableDataFrom("");
+    setClassNametableDataTo("");
     setExchangeRate("");
     setResult("");
   };
@@ -199,8 +199,8 @@ function App() {
         <Form
           changeFormValues={changeFormValues}
           exchangeRate={exchangeRate}
-          selectFrom={selectFrom}
-          selectTo={selectTo}
+          tableDataFrom={tableDataFrom}
+          tableDataTo={tableDataTo}
           moneyAmount={moneyAmount}
           handleSelectCurrencyFromChange={handleSelectCurrencyFromChange}
           handleSelectCurrencyToChange={handleSelectCurrencyToChange}
@@ -209,8 +209,8 @@ function App() {
           selectedFrom={selectedFrom}
           selectedTo={selectedTo}
           active={active}
-          classNameSelectFrom={classNameSelectFrom}
-          classNameSelectTo={classNameSelectTo}
+          classNametableDataFrom={classNametableDataFrom}
+          classNametableDataTo={classNametableDataTo}
           currencies={currencies}
           result={result}
           resetCalculator={resetCalculator}
@@ -219,8 +219,8 @@ function App() {
           <Table
             changeFormValues={changeFormValues}
             exchangeRate={exchangeRate}
-            selectFrom={selectFrom}
-            selectTo={selectTo}
+            tableDataFrom={tableDataFrom}
+            tableDataTo={tableDataTo}
             selectedFrom={selectedFrom}
             selectedTo={selectedTo}
             active={active}
