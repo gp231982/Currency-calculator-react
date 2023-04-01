@@ -24,7 +24,7 @@ const TableBodyRowItem = ({
         }  `}
         onClick={(e) => {
           handleTableDataClick(
-            e.tableDataTarget,
+            e.target,
             item.exchangeRate,
             item.currencyPair.slice(0, 3),
             item.currencyPair.slice(-3),

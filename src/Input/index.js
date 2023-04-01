@@ -21,7 +21,7 @@ const Input = ({
           : ""
       }`}
       value={`${id === "currencyRatio" ? exchangeRate : moneyAmount}`}
-      onChange={(e) => handleInputMoneyChange(e.tableDataTarget.value)}
+      onChange={(e) => handleInputMoneyChange(e.target.value)}
       id={id}
       type={type}
       min={min}
