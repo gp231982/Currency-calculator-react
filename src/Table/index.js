@@ -5,9 +5,8 @@ import TableBody from "../TableBody";
 
 const Table = ({
   tableBodyRows,
-  tdItems,
   exchangeRate,
-  changeFormValues,
+  handleTableDataClick,
   tableDataFrom,
   tableDataTo,
   selectedFrom,
@@ -18,14 +17,13 @@ const Table = ({
     <TableCaption />
     <TableHeader />
     <TableBody
-      changeFormValues={changeFormValues}
+      handleTableDataClick={handleTableDataClick}
       exchangeRate={exchangeRate}
       tableDataFrom={tableDataFrom}
       tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
       active={active}
-      tdItems={tdItems}
       tableBodyRows={tableBodyRows}
     />
   </table>

@@ -65,26 +65,25 @@ function App() {
   const tableBodyRows = [row1, row2, row3, row4, row5];
   const tdArray = [...row1, ...row2, ...row3, ...row4, ...row5];
 
-  const changeFormValues = (
-    target,
+  const handleTableDataClick = (
+    tableDataTarget,
     exchangeRate,
     tableDataFrom,
-    tableDataTo,
-    item
+    tableDataTo
   ) => {
     setExchangeRate(exchangeRate);
     settableDataFrom(tableDataFrom);
     settableDataTo(tableDataTo);
     setSelectedFrom(tableDataFrom);
     setSelectedTo(tableDataTo);
-    setActive((active) => true);
-    settdItems((tdItems) => [...tdItems, target]);
-    target.classList.add("active");
+    setActive(true);
+    settdItems((tdItems) => [...tdItems, tableDataTarget]);
+    tableDataTarget.classList.add("active");
     setClassNametableDataFrom("active");
     setClassNametableDataTo("active");
 
     if (tdItems.length === 1) {
-      if (tdItems[0] === target) {
+      if (tdItems[0] === tableDataTarget) {
         tdItems.shift();
         return;
       }
@@ -98,7 +97,7 @@ function App() {
       item.classList.remove("active");
       item = null;
     });
-    settdItems((tdItems) => []);
+    settdItems([]);
     settableDataFrom(selectedFrom);
     setSelectedFrom(selectedFrom);
     let activeTd = tdArray.filter(
@@ -120,14 +119,14 @@ function App() {
     }
 
     if (selectedFrom === "") {
-      setActive((active) => false);
+      setActive(false);
       setClassNametableDataFrom("");
     }
 
     if (selectedFrom !== "") {
-      setActive((active) => true);
+      setActive(true);
       setClassNametableDataFrom("active");
-      settdItems((tdItems) => []);
+      settdItems([]);
     }
   };
 
@@ -137,12 +136,13 @@ function App() {
       item = null;
     });
 
-    settdItems((tdItems) => []);
+    settdItems([]);
     settableDataTo(selectedTo);
     setSelectedTo(selectedTo);
     let activeTd = tdArray.filter(
-      (td) => td.id === selectedFrom + "/" + selectedTo
+      (tableData) => tableData.id === selectedFrom + "/" + selectedTo
     );
+
     if (
       selectedFrom !== "" &&
       selectedTo !== "" &&
@@ -159,13 +159,14 @@ function App() {
     }
 
     if (selectedTo === "") {
-      setActive((active) => false);
+      setActive(false);
       setClassNametableDataTo("");
     }
+
     if (selectedTo !== "") {
       setClassNametableDataTo("active");
-      setActive((active) => true);
-      settdItems((tdItems) => []);
+      setActive(true);
+      settdItems([]);
     }
   };
 
@@ -197,7 +198,6 @@ function App() {
     <div className="App">
       <MainContainer>
         <Form
-          changeFormValues={changeFormValues}
           exchangeRate={exchangeRate}
           tableDataFrom={tableDataFrom}
           tableDataTo={tableDataTo}
@@ -217,14 +217,13 @@ function App() {
         />
         <TableContainer>
           <Table
-            changeFormValues={changeFormValues}
+            handleTableDataClick={handleTableDataClick}
             exchangeRate={exchangeRate}
             tableDataFrom={tableDataFrom}
             tableDataTo={tableDataTo}
             selectedFrom={selectedFrom}
             selectedTo={selectedTo}
             active={active}
-            tdItems={tdItems}
             tableBodyRows={tableBodyRows}
           />
         </TableContainer>

@@ -3,21 +3,20 @@ import TableBodyRowItem from "../TableBodyRowItem";
 const TableBodyRow = ({
   index,
   exchangeRate,
-  changeFormValues,
+  handleTableDataClick,
   tableDataFrom,
   tableDataTo,
   selectedFrom,
   selectedTo,
   active,
-  tdItems,
   tableBodyRows,
 }) => {
   const tableBodyRowJsx = [];
 
-  tableBodyRows[index].forEach((item, index, id) => {
+  tableBodyRows[index].forEach((item, index) => {
     tableBodyRowJsx.push(
       <TableBodyRowItem
-        changeFormValues={changeFormValues}
+        handleTableDataClick={handleTableDataClick}
         exchangeRate={exchangeRate}
         tableDataFrom={tableDataFrom}
         tableDataTo={tableDataTo}
@@ -25,10 +24,8 @@ const TableBodyRow = ({
         selectedTo={selectedTo}
         item={item}
         index={index}
-        id={id}
         key={index}
         active={active}
-        tdItems={tdItems}
       />
     );
   });

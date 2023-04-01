@@ -7,7 +7,6 @@ const Form = ({
   handleSelectCurrencyFromChange,
   handleSelectCurrencyToChange,
   handleInputMoneyChange,
-  changeFormValues,
   calculateResult,
   exchangeRate,
   tableDataFrom,
@@ -25,7 +24,6 @@ const Form = ({
   <form className="form">
     <FieldSet>
       <FormItemsList
-        changeFormValues={changeFormValues}
         exchangeRate={exchangeRate}
         tableDataFrom={tableDataFrom}
         tableDataTo={tableDataTo}

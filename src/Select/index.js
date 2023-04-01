@@ -28,8 +28,8 @@ const Select = ({
       id={id}
       onChange={
         id === "currencyFrom"
-          ? (e) => handleSelectCurrencyFromChange(e.target.value)
-          : (e) => handleSelectCurrencyToChange(e.target.value)
+          ? (e) => handleSelectCurrencyFromChange(e.tableDataTarget.value)
+          : (e) => handleSelectCurrencyToChange(e.tableDataTarget.value)
       }
     >
       {

@@ -1,14 +1,11 @@
 import "./style.css";
 
 const TableBodyRowItem = ({
-  tableDataFrom,
-  tableDataTo,
   selectedFrom,
   selectedTo,
   item,
-  changeFormValues,
+  handleTableDataClick,
   active,
-  tdItems,
 }) => {
   return (
     <>
@@ -26,8 +23,8 @@ const TableBodyRowItem = ({
           item.id === selectedFrom + "/" + selectedTo ? "active" : ""
         }  `}
         onClick={(e) => {
-          changeFormValues(
-            e.target,
+          handleTableDataClick(
+            e.tableDataTarget,
             item.exchangeRate,
             item.currencyPair.slice(0, 3),
             item.currencyPair.slice(-3),

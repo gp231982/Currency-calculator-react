@@ -2,18 +2,17 @@ import TableBodyRow from "../TableBodyRow";
 
 const TableBody = ({
   exchangeRate,
-  changeFormValues,
+  handleTableDataClick,
   tableDataFrom,
   tableDataTo,
   selectedFrom,
   selectedTo,
   active,
-  tdItems,
   tableBodyRows,
 }) => (
   <tbody>
     <TableBodyRow
-      changeFormValues={changeFormValues}
+      handleTableDataClick={handleTableDataClick}
       exchangeRate={exchangeRate}
       tableDataFrom={tableDataFrom}
       tableDataTo={tableDataTo}
@@ -21,11 +20,10 @@ const TableBody = ({
       selectedTo={selectedTo}
       active={active}
       index={0}
-      tdItems={tdItems}
       tableBodyRows={tableBodyRows}
     />
     <TableBodyRow
-      changeFormValues={changeFormValues}
+      handleTableDataClick={handleTableDataClick}
       exchangeRate={exchangeRate}
       tableDataFrom={tableDataFrom}
       tableDataTo={tableDataTo}
@@ -33,11 +31,10 @@ const TableBody = ({
       selectedTo={selectedTo}
       active={active}
       index={1}
-      tdItems={tdItems}
       tableBodyRows={tableBodyRows}
     />
     <TableBodyRow
-      changeFormValues={changeFormValues}
+      handleTableDataClick={handleTableDataClick}
       exchangeRate={exchangeRate}
       tableDataFrom={tableDataFrom}
       tableDataTo={tableDataTo}
@@ -45,11 +42,10 @@ const TableBody = ({
       selectedTo={selectedTo}
       active={active}
       index={2}
-      tdItems={tdItems}
       tableBodyRows={tableBodyRows}
     />
     <TableBodyRow
-      changeFormValues={changeFormValues}
+      handleTableDataClick={handleTableDataClick}
       exchangeRate={exchangeRate}
       tableDataFrom={tableDataFrom}
       tableDataTo={tableDataTo}
@@ -60,7 +56,7 @@ const TableBody = ({
       tableBodyRows={tableBodyRows}
     />
     <TableBodyRow
-      changeFormValues={changeFormValues}
+      handleTableDataClick={handleTableDataClick}
       exchangeRate={exchangeRate}
       tableDataFrom={tableDataFrom}
       tableDataTo={tableDataTo}
@@ -68,7 +64,6 @@ const TableBody = ({
       selectedTo={selectedTo}
       active={active}
       index={4}
-      tdItems={tdItems}
       tableBodyRows={tableBodyRows}
     />
   </tbody>
