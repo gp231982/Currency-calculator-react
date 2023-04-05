@@ -1,5 +1,5 @@
 import "./style.css";
-import Currencies from "../Currencies";
+import CurrencyOptions from "../CurrencyOptions";
 
 const Select = ({
   handleSelectCurrencyFromChange,
@@ -33,7 +33,7 @@ const Select = ({
       }
     >
       {
-        <Currencies
+        <CurrencyOptions
           id={id}
           tableDataFrom={tableDataFrom}
           tableDataTo={tableDataTo}

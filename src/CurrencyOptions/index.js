@@ -1,4 +1,4 @@
-const Currencies = ({ currencies }) => {
+const CurrencyOptions = ({ currencies }) => {
   return currencies.map((currency) => (
     <option key={currency.id} value={currency.value}>
       {currency.label}
@@ -6,4 +6,4 @@ const Currencies = ({ currencies }) => {
   ));
 };
 
-export default Currencies;
+export default CurrencyOptions;
