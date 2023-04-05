@@ -4,6 +4,7 @@ import Form from "./Form";
 import TableContainer from "./TableContainer";
 import Table from "./Table";
 import { useState } from "react";
+import ActualDate from "./ActualDate";
 
 function App() {
   const [exchangeRate, setExchangeRate] = useState("");
@@ -197,6 +198,7 @@ function App() {
   return (
     <div className="App">
       <MainContainer>
+        <ActualDate />
         <Form
           exchangeRate={exchangeRate}
           tableDataFrom={tableDataFrom}
