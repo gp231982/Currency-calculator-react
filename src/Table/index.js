@@ -1,7 +1,7 @@
-import "./style.css";
 import TableHeader from "../TableHeader";
 import TableCaption from "../TableCaption";
 import TableBody from "../TableBody";
+import { CurrenciesAndRatesTable } from "./styled";
 
 const Table = ({
   tableBodyRows,
@@ -11,9 +11,8 @@ const Table = ({
   tableDataTo,
   selectedFrom,
   selectedTo,
-  active,
 }) => (
-  <table className="table">
+  <CurrenciesAndRatesTable>
     <TableCaption />
     <TableHeader />
     <TableBody
@@ -23,10 +22,9 @@ const Table = ({
       tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
-      active={active}
       tableBodyRows={tableBodyRows}
     />
-  </table>
+  </CurrenciesAndRatesTable>
 );
 
 export default Table;

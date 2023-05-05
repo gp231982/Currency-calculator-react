@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./style.css";
+import { ActDate } from "./styled";
 
 const dateOptions = {
   month: "long",
@@ -29,7 +29,7 @@ const ActualDate = () => {
     };
   });
 
-  return <p className="actualDate">{`Dzisiaj jest ${dateStr}, ${timeStr}`}</p>;
+  return <ActDate>{`Dzisiaj jest ${dateStr}, ${timeStr}`}</ActDate>;
 };
 
 export default ActualDate;

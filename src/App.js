@@ -12,7 +12,7 @@ function App() {
   const [exchangeRate, setExchangeRate] = useState("");
   const [tableDataFrom, settableDataFrom] = useState("");
   const [tableDataTo, settableDataTo] = useState("");
-  const [active, setActive] = useState(false);
+  // const [active, setActive] = useState();
   const [selectedFrom, setSelectedFrom] = useState("");
   const [selectedTo, setSelectedTo] = useState("");
   const [tdItems, settdItems] = useState([]);
@@ -35,7 +35,7 @@ function App() {
     settableDataTo(tableDataTo);
     setSelectedFrom(tableDataFrom);
     setSelectedTo(tableDataTo);
-    setActive(true);
+    // setActive();
     settdItems((tdItems) => [...tdItems, tableDataTarget]);
     tableDataTarget.classList.add("active");
     setClassNametableDataFrom("active");
@@ -78,12 +78,12 @@ function App() {
     }
 
     if (selectedFrom === "") {
-      setActive(false);
+      // setActive(false);
       setClassNametableDataFrom("");
     }
 
     if (selectedFrom !== "") {
-      setActive(true);
+      // setActive(true);
       setClassNametableDataFrom("active");
       settdItems([]);
     }
@@ -118,13 +118,13 @@ function App() {
     }
 
     if (selectedTo === "") {
-      setActive(false);
+      // setActive(false);
       setClassNametableDataTo("");
     }
 
     if (selectedTo !== "") {
       setClassNametableDataTo("active");
-      setActive(true);
+      // setActive(true);
       settdItems([]);
     }
   };
@@ -168,7 +168,7 @@ function App() {
           calculateResult={calculateResult}
           selectedFrom={selectedFrom}
           selectedTo={selectedTo}
-          active={active}
+          // active={active}
           classNametableDataFrom={classNametableDataFrom}
           classNametableDataTo={classNametableDataTo}
           currencies={currencies}
@@ -183,7 +183,7 @@ function App() {
             tableDataTo={tableDataTo}
             selectedFrom={selectedFrom}
             selectedTo={selectedTo}
-            active={active}
+            // active={active}
             tableBodyRows={tableBodyRows}
           />
         </TableContainer>

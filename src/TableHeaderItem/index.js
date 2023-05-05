@@ -1,9 +1,10 @@
-import "./style.css";
+
+import {TableHeader} from "./styled.js";
 
 const TableHeaderItem = () => (
   <>
-    <th className="tableHeaderItem">Para</th>
-    <th className="tableHeaderItem">Kurs</th>
+    <TableHeader>Para</TableHeader>
+    <TableHeader>Kurs</TableHeader>
   </>
 );
 

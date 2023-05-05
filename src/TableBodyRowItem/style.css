@@ -1,9 +1,0 @@
-.tableBodyRowItem {
-  padding: 20px;
-  border: 1px solid black;
-}
-
-.tableBodyRowItem:hover {
-  cursor: pointer;
-  background-color: rgb(211, 207, 207);
-}

@@ -2,7 +2,7 @@ import InputListItem from "../InputListItem";
 import SelectListItem from "../SelectListItem";
 import Input from "../Input";
 import Select from "../Select";
-import "./style.css";
+import { List } from "./styled";
 
 const FormItemsList = ({
   handleSelectCurrencyFromChange,
@@ -13,13 +13,12 @@ const FormItemsList = ({
   exchangeRate,
   tableDataFrom,
   tableDataTo,
-  active,
   classNametableDataFrom,
   classNametableDataTo,
   currencies,
   moneyAmount,
 }) => (
-  <ul className="formItemsList__ul">
+  <List className="formItemsList__ul">
     <InputListItem
       labelText={"money"}
       spanText={"Wpisz kwotę*"}
@@ -47,7 +46,6 @@ const FormItemsList = ({
           id={"currencyFrom"}
           handleSelectCurrencyFromChange={handleSelectCurrencyFromChange}
           selectedFrom={selectedFrom}
-          active={active}
           classNametableDataFrom={classNametableDataFrom}
           classNametableDataTo={classNametableDataTo}
           currencies={currencies}
@@ -67,7 +65,6 @@ const FormItemsList = ({
           id={"currencyTo"}
           handleSelectCurrencyToChange={handleSelectCurrencyToChange}
           selectedTo={selectedTo}
-          active={active}
           classNametableDataFrom={classNametableDataFrom}
           classNametableDataTo={classNametableDataTo}
           currencies={currencies}
@@ -91,7 +88,7 @@ const FormItemsList = ({
         />
       }
     />
-  </ul>
+  </List>
 );
 
 export default FormItemsList;

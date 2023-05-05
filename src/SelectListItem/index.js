@@ -1,12 +1,12 @@
-import "./style.css";
+import { Item, Span } from "./styled";
 
 const SelectListItem = ({ spanText, select }) => (
-  <li className="selectListItem">
+  <Item>
     <label>
-      <span className="selectListItem__labelText">{spanText}</span>
+      <Span>{spanText}</Span>
       {select}
     </label>
-  </li>
+  </Item>
 );
 
 export default SelectListItem;

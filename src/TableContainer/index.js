@@ -1,7 +1,7 @@
-import "./style.css";
+import { Container } from "./styled";
 
 const TableContainer = ({ children }) => (
-  <div className="tableContainer">{children}</div>
+  <Container>{children}</Container>
 );
 
 export default TableContainer;

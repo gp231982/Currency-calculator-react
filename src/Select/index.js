@@ -1,5 +1,5 @@
-import "./style.css";
 import CurrencyOptions from "../CurrencyOptions";
+import { Currency } from "./styled.js";
 
 const Select = ({
   handleSelectCurrencyFromChange,
@@ -14,15 +14,15 @@ const Select = ({
   currencies,
 }) => {
   return (
-    <select
+    <Currency
       value={id === "currencyFrom" ? selectedFrom : selectedTo}
-      className={`select ${
+      className={
         id === "currencyFrom"
           ? classNametableDataFrom
           : id === "currencyTo"
           ? classNametableDataTo
           : ""
-      }`}
+      }
       required
       name="waluta"
       id={id}
@@ -40,7 +40,7 @@ const Select = ({
           currencies={currencies}
         />
       }
-    </select>
+    </Currency>
   );
 };
 

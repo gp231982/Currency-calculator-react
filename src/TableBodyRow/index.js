@@ -8,7 +8,6 @@ const TableBodyRow = ({
   tableDataTo,
   selectedFrom,
   selectedTo,
-  active,
   tableBodyRows,
 }) => {
   const tableBodyRowJsx = [];
@@ -25,7 +24,6 @@ const TableBodyRow = ({
         item={item}
         index={index}
         key={index}
-        active={active}
       />
     );
   });

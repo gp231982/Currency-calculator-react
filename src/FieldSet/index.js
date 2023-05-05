@@ -1,13 +1,13 @@
-import "./style.css";
+import { FormFieldSet, FormFieldSetHeader } from "./styled";
 
 const FieldSet = ({ children }) => (
-  <fieldset className="fieldset">
+  <FormFieldSet>
     <legend>
-      <h2 className="fieldset__header">Kalkulator walut</h2>
+      <FormFieldSetHeader>Kalkulator walut</FormFieldSetHeader>
     </legend>
     <h3>Wymagane pola zazanczone są z "*"</h3>
     {children}
-  </fieldset>
+  </FormFieldSet>
 );
 
 export default FieldSet;

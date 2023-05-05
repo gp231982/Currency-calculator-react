@@ -7,7 +7,6 @@ const TableBody = ({
   tableDataTo,
   selectedFrom,
   selectedTo,
-  active,
   tableBodyRows,
 }) => (
   <tbody>
@@ -18,7 +17,6 @@ const TableBody = ({
       tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
-      active={active}
       index={0}
       tableBodyRows={tableBodyRows}
     />
@@ -29,7 +27,6 @@ const TableBody = ({
       tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
-      active={active}
       index={1}
       tableBodyRows={tableBodyRows}
     />
@@ -40,7 +37,6 @@ const TableBody = ({
       tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
-      active={active}
       index={2}
       tableBodyRows={tableBodyRows}
     />
@@ -51,7 +47,6 @@ const TableBody = ({
       tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
-      active={active}
       index={3}
       tableBodyRows={tableBodyRows}
     />
@@ -62,7 +57,6 @@ const TableBody = ({
       tableDataTo={tableDataTo}
       selectedFrom={selectedFrom}
       selectedTo={selectedTo}
-      active={active}
       index={4}
       tableBodyRows={tableBodyRows}
     />

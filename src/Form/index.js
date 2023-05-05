@@ -1,7 +1,6 @@
-import "./style.css";
-import Button from "../Button";
 import FieldSet from "../FieldSet";
 import FormItemsList from "../FormItemsList";
+import { CalcForm, Result, StyledButton } from "./styled";
 
 const Form = ({
   handleSelectCurrencyFromChange,
@@ -13,7 +12,6 @@ const Form = ({
   tableDataTo,
   selectedFrom,
   selectedTo,
-  active,
   classNametableDataFrom,
   classNametableDataTo,
   currencies,
@@ -21,7 +19,7 @@ const Form = ({
   result,
   resetCalculator,
 }) => (
-  <form className="form">
+  <CalcForm>
     <FieldSet>
       <FormItemsList
         exchangeRate={exchangeRate}
@@ -32,7 +30,6 @@ const Form = ({
         handleInputMoneyChange={handleInputMoneyChange}
         selectedFrom={selectedFrom}
         selectedTo={selectedTo}
-        active={active}
         classNametableDataFrom={classNametableDataFrom}
         classNametableDataTo={classNametableDataTo}
         currencies={currencies}
@@ -40,29 +37,26 @@ const Form = ({
         calculateResult={calculateResult}
       />
       {
-        <Button
+        <StyledButton
           calculateResult={calculateResult}
           result={result}
           type="submit"
-          className={`form__calculationButton ${
-            (moneyAmount && tableDataFrom && tableDataTo && exchangeRate) !== ""
-              ? ""
-              : "form__calculationButton--disabled"
-          }`}
+          disabled={
+            (moneyAmount && tableDataFrom && tableDataTo && exchangeRate) === ""
+          }
           textContent="Oblicz"
         />
       }
-      <p className="form__result">Wynik: {result}</p>
+      <Result>Wynik: {result}</Result>
       {
-        <Button
+        <StyledButton
           resetCalculator={resetCalculator}
           type="reset"
-          className="form__resetButton"
           textContent="Reset"
         />
       }
     </FieldSet>
-  </form>
+  </CalcForm>
 );
 
 export default Form;

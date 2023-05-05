@@ -1,12 +1,12 @@
-import "./style.css";
+import { Item, Span } from "./styled";
 
 const InputListItem = ({ spanText, input }) => (
-  <li className="inputListItem">
+  <Item>
     <label>
-      <span className="inputListItem__labelText">{spanText}</span>
+      <Span>{spanText}</Span>
       {input}
     </label>
-  </li>
+  </Item>
 );
 
 export default InputListItem;

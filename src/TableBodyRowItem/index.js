@@ -1,27 +1,19 @@
-import "./style.css";
+import { Item } from "./styled";
 
 const TableBodyRowItem = ({
   selectedFrom,
   selectedTo,
   item,
   handleTableDataClick,
-  active,
 }) => {
   return (
     <>
-      <td
-        id={item.id}
-        className={`tableBodyRowItem ${
-          item.id === selectedFrom + "/" + selectedTo ? "active" : ""
-        }  `}
-      >
+      <Item id={item.id} selectedId={selectedFrom + "/" + selectedTo}>
         {item.currencyPair}
-      </td>
-      <td
+      </Item>
+      <Item
         id={item.id}
-        className={`tableBodyRowItem ${
-          item.id === selectedFrom + "/" + selectedTo ? "active" : ""
-        }  `}
+        selectedId={selectedFrom + "/" + selectedTo}
         onClick={(e) => {
           handleTableDataClick(
             e.target,
@@ -30,16 +22,10 @@ const TableBodyRowItem = ({
             item.currencyPair.slice(-3),
             item
           );
-          active = true;
-          if (active === true) {
-            active = "active";
-          } else {
-            active = "";
-          }
         }}
       >
         {item.exchangeRate}
-      </td>
+      </Item>
     </>
   );
 };
