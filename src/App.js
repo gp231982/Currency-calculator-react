@@ -12,7 +12,6 @@ function App() {
   const [exchangeRate, setExchangeRate] = useState("");
   const [tableDataFrom, settableDataFrom] = useState("");
   const [tableDataTo, settableDataTo] = useState("");
-  // const [active, setActive] = useState();
   const [selectedFrom, setSelectedFrom] = useState("");
   const [selectedTo, setSelectedTo] = useState("");
   const [tdItems, settdItems] = useState([]);
@@ -78,12 +77,10 @@ function App() {
     }
 
     if (selectedFrom === "") {
-      // setActive(false);
       setClassNametableDataFrom("");
     }
 
     if (selectedFrom !== "") {
-      // setActive(true);
       setClassNametableDataFrom("active");
       settdItems([]);
     }
@@ -118,13 +115,11 @@ function App() {
     }
 
     if (selectedTo === "") {
-      // setActive(false);
       setClassNametableDataTo("");
     }
 
     if (selectedTo !== "") {
       setClassNametableDataTo("active");
-      // setActive(true);
       settdItems([]);
     }
   };
@@ -168,7 +163,6 @@ function App() {
           calculateResult={calculateResult}
           selectedFrom={selectedFrom}
           selectedTo={selectedTo}
-          // active={active}
           classNametableDataFrom={classNametableDataFrom}
           classNametableDataTo={classNametableDataTo}
           currencies={currencies}
@@ -183,7 +177,6 @@ function App() {
             tableDataTo={tableDataTo}
             selectedFrom={selectedFrom}
             selectedTo={selectedTo}
-            // active={active}
             tableBodyRows={tableBodyRows}
           />
         </TableContainer>
