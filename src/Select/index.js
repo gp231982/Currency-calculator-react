@@ -1,5 +1,5 @@
 import CurrencyOptions from "../CurrencyOptions";
-import { Currency } from "./styled.js";
+import { MoneyInput } from "../Input/styled";
 
 const Select = ({
   handleSelectCurrencyFromChange,
@@ -14,7 +14,9 @@ const Select = ({
   currencies,
 }) => {
   return (
-    <Currency
+    <MoneyInput
+      as="select"
+      style={{ cursor: "pointer" }}
       value={id === "currencyFrom" ? selectedFrom : selectedTo}
       className={
         id === "currencyFrom"
@@ -40,7 +42,7 @@ const Select = ({
           currencies={currencies}
         />
       }
-    </Currency>
+    </MoneyInput>
   );
 };
 

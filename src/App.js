@@ -34,7 +34,6 @@ function App() {
     settableDataTo(tableDataTo);
     setSelectedFrom(tableDataFrom);
     setSelectedTo(tableDataTo);
-    // setActive();
     settdItems((tdItems) => [...tdItems, tableDataTarget]);
     tableDataTarget.classList.add("active");
     setClassNametableDataFrom("active");

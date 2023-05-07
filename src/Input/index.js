@@ -1,4 +1,4 @@
-import { Money } from "./styled.js";
+import { MoneyInput } from "./styled.js";
 
 const Input = ({
   id,
@@ -13,7 +13,7 @@ const Input = ({
   moneyAmount,
 }) => {
   return (
-    <Money
+    <MoneyInput
       className={`input ${
         (id === "currencyRatio" && exchangeRate !== "") ||
         (id === "money" && moneyAmount !== "")

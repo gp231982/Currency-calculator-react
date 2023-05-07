@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Money = styled.input`
+export const MoneyInput = styled.input`
   width: 100%;
   max-width: 500px;
   padding: 10px;
