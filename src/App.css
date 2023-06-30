@@ -1,3 +1,14 @@
 .active {
   background-color: greenyellow;
 }
+
+
+.infoAfterLoading {
+  font-size: 36px;
+  text-align: center;
+}
+
+.fetchedDate {
+  font-weight: bold;
+}
+

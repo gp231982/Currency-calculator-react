@@ -1,36 +1,40 @@
 const row1 = [
-  { currencyPair: "EUR/PLN", exchangeRate: 4.6797, id: "EUR/PLN" },
-  { currencyPair: "USD/PLN", exchangeRate: 4.4521, id: "USD/PLN" },
-  { currencyPair: "GBP/PLN", exchangeRate: 5.2964, id: "GBP/PLN" },
-  { currencyPair: "CHF/PLN", exchangeRate: 4.7515, id: "CHF/PLN" },
+  { currencyPair: "EUR/PLN", exchangeRate: "loadingData...", id: "EUR/PLN" },
+  { currencyPair: "USD/PLN", exchangeRate: "loadingData...", id: "USD/PLN" },
+  { currencyPair: "GBP/PLN", exchangeRate: "loadingData...", id: "GBP/PLN" },
+  { currencyPair: "CHF/PLN", exchangeRate: "loadingData...", id: "CHF/PLN" },
 ];
 
 const row2 = [
-  { currencyPair: "EUR/USD", exchangeRate: 1.0521, id: "EUR/USD" },
-  { currencyPair: "PLN/USD", exchangeRate: 0.2201, id: "PLN/USD" },
-  { currencyPair: "GBP/USD", exchangeRate: 1.1911, id: "GBP/USD" },
-  { currencyPair: "CHF/USD", exchangeRate: 1.0701, id: "CHF/USD" },
+  { currencyPair: "EUR/USD", exchangeRate: "loadingData...", id: "EUR/USD" },
+  { currencyPair: "PLN/USD", exchangeRate: "loadingData...", id: "PLN/USD" },
+  { currencyPair: "GBP/USD", exchangeRate: "loadingData...", id: "GBP/USD" },
+  { currencyPair: "CHF/USD", exchangeRate: "loadingData...", id: "CHF/USD" },
 ];
 
 const row3 = [
-  { currencyPair: "USD/EUR", exchangeRate: 0.9512, id: "USD/EUR" },
-  { currencyPair: "PLN/EUR", exchangeRate: 0.2112, id: "PLN/EUR" },
-  { currencyPair: "GBP/EUR", exchangeRate: 1.1334, id: "GBP/EUR" },
-  { currencyPair: "CHF/EUR", exchangeRate: 1.0148, id: "CHF/EUR" },
+  { currencyPair: "USD/EUR", exchangeRate: "loadingData...", id: "USD/EUR" },
+  { currencyPair: "PLN/EUR", exchangeRate: "loadingData...", id: "PLN/EUR" },
+  { currencyPair: "GBP/EUR", exchangeRate: "loadingData...", id: "GBP/EUR" },
+  { currencyPair: "CHF/EUR", exchangeRate: "loadingData...", id: "CHF/EUR" },
 ];
 
 const row4 = [
-  { currencyPair: "USD/GBP", exchangeRate: 0.8356, id: "USD/GBP" },
-  { currencyPair: "PLN/GBP", exchangeRate: 0.1886, id: "PLN/GBP" },
-  { currencyPair: "EUR/GBP", exchangeRate: 0.8802, id: "EUR/GBP" },
-  { currencyPair: "CHF/GBP", exchangeRate: 0.8941, id: "CHF/GBP" },
+  { currencyPair: "USD/GBP", exchangeRate: "loadingData...", id: "USD/GBP" },
+  { currencyPair: "PLN/GBP", exchangeRate: "loadingData...", id: "PLN/GBP" },
+  { currencyPair: "EUR/GBP", exchangeRate: "loadingData...", id: "EUR/GBP" },
+  { currencyPair: "CHF/GBP", exchangeRate: "loadingData...", id: "CHF/GBP" },
 ];
 
 const row5 = [
-  { currencyPair: "USD/CHF", exchangeRate: 0.9279, id: "USD/CHF" },
-  { currencyPair: "PLN/CHF", exchangeRate: 0.2134, id: "PLN/CHF" },
-  { currencyPair: "EUR/CHF", exchangeRate: 0.9935, id: "EUR/CHF" },
-  { currencyPair: "GBP/CHF", exchangeRate: 1.1143, id: "GBP/CHF" },
+  { currencyPair: "USD/CHF", exchangeRate: "loadingData...", id: "USD/CHF" },
+  { currencyPair: "PLN/CHF", exchangeRate: "loadingData...", id: "PLN/CHF" },
+  { currencyPair: "EUR/CHF", exchangeRate: "loadingData...", id: "EUR/CHF" },
+  { currencyPair: "GBP/CHF", exchangeRate: "loadingData...", id: "GBP/CHF" },
 ];
+
+let item = { i: 1, j: 2, k: 3 };
+console.log(item);
+console.log({...item});
 
 export { row1, row2, row3, row4, row5 };

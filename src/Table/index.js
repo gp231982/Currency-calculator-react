@@ -11,9 +11,11 @@ const Table = ({
   tableDataTo,
   selectedFrom,
   selectedTo,
+  isLoading,
+  failure
 }) => (
   <CurrenciesAndRatesTable>
-    <TableCaption />
+    <TableCaption isLoading={isLoading} failure={failure} />
     <TableHeader />
     <TableBody
       handleTableDataClick={handleTableDataClick}
