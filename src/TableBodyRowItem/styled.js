@@ -7,11 +7,12 @@ export const Item = styled.td`
   ${({ selectedId, id }) =>
     selectedId === id &&
     css`
-      background-color: greenyellow;
+      background-color: rgba(197, 183, 163, 0.735);
     `}
 
   &:hover {
     cursor: pointer;
-    background-color: rgb(211, 207, 207);
+    background-color: rgba(197, 183, 163, 0.735)
+
   }
 `;

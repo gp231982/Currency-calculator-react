@@ -3,10 +3,11 @@ import MainContainer from "./MainContainer";
 import Form from "./Form";
 import TableContainer from "./TableContainer";
 import Table from "./Table";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import ActualDate from "./ActualDate";
 import { currencies } from "./currencies";
 import { row1, row2, row3, row4, row5 } from "./tableRows";
+import useCustomFetch from "./useCustomFetch";
 
 function App() {
   const [exchangeRate, setExchangeRate] = useState("");
@@ -19,63 +20,9 @@ function App() {
   const [classNametableDataTo, setClassNametableDataTo] = useState("");
   const [moneyAmount, setMoneyAmount] = useState("");
   const [result, setResult] = useState("");
-  const [tableBodyRows, setTableBodyRows] = useState([
-    row1,
-    row2,
-    row3,
-    row4,
-    row5,
-  ]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [fetchedDate, setFetchedDate] = useState(""); // Add this line
-  const [failure, setFailure] = useState(""); // Dodana zmienna stanowa failure
+  const [tableBodyRows, isLoading, fetchedDate, failure] = useCustomFetch();
 
   const tdArray = [...row1, ...row2, ...row3, ...row4, ...row5];
-
-  const baseCurrencies = ["PLN", "USD", "EUR", "GBP", "CHF"];
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setIsLoading(true);
-        setFailure(""); // Resetowanie zmiennej failure przed pobraniem danych
-        const updatedRows = [];
-
-        for (let index = 0; index < baseCurrencies.length; index++) {
-          const apiEndpoint = `https://api.exchangerate.host/latest?base=${baseCurrencies[index]}&places=8`;
-          const response = await fetch(apiEndpoint);
-          const data = await response.json();
-          setFetchedDate(data.date);
-          console.log(data);
-
-          const updatedRow = [
-            ...tableBodyRows[index].map((item) => ({
-              ...item,
-              exchangeRate: (1 / data.rates[item.id.slice(0, 3)]).toFixed(4),
-            })),
-          ];
-          updatedRows.push(updatedRow);
-        }
-        setTableBodyRows(updatedRows);
-        setIsLoading(false);
-      } catch (error) {
-        setFailure("Wystąpił błąd podczas pobierania danych walutowych.");
-        setIsLoading(false);
-        console.error(error);
-      }
-    };
-    setTimeout(fetchData, 2000);
-  }, baseCurrencies);
-
-  useEffect(() => {
-    if (isLoading) {
-      document.body.style.backgroundImage = "none";
-    } else {
-      document.body.style.background = "";
-    }
-  }, [isLoading]);
-
-  useEffect(() => {});
 
   const handleTableDataClick = (
     tableDataTarget,
@@ -235,17 +182,6 @@ function App() {
             failure={failure}
           />
         </TableContainer>
-        {/* <p className="infoAfterLoading">
-          {isLoading ? (
-            ""
-          ) : (
-            <>
-              Kursy walut pobierane są z Europejskiego Banku Centralnego
-              <br />
-              aktualne na dzień bieżący <span className="fetchedDate">{fetchedDate}</span> 
-            </>
-          )}
-        </p> */}
         <p className="infoAfterLoading">
           {!failure && !isLoading && (
             <>
