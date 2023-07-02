@@ -3,8 +3,9 @@ import MainContainer from "./MainContainer";
 import Form from "./Form";
 import TableContainer from "./TableContainer";
 import Table from "./Table";
-import { useEffect, useState} from "react";
+import { useState } from "react";
 import ActualDate from "./ActualDate";
+import InfoAfterDataLoad from "./InfoAfterDataLoad";
 import { currencies } from "./currencies";
 import { row1, row2, row3, row4, row5 } from "./tableRows";
 import useCustomFetch from "./useCustomFetch";
@@ -150,49 +151,51 @@ function App() {
 
   return (
     <div className="App">
-      <MainContainer>
-        <ActualDate />
-        <Form
-          exchangeRate={exchangeRate}
-          tableDataFrom={tableDataFrom}
-          tableDataTo={tableDataTo}
-          moneyAmount={moneyAmount}
-          handleSelectCurrencyFromChange={handleSelectCurrencyFromChange}
-          handleSelectCurrencyToChange={handleSelectCurrencyToChange}
-          handleInputMoneyChange={handleInputMoneyChange}
-          calculateResult={calculateResult}
-          selectedFrom={selectedFrom}
-          selectedTo={selectedTo}
-          classNametableDataFrom={classNametableDataFrom}
-          classNametableDataTo={classNametableDataTo}
-          currencies={currencies}
-          result={result}
-          resetCalculator={resetCalculator}
-        />
-        <TableContainer>
-          <Table
-            handleTableDataClick={handleTableDataClick}
+      {isLoading ? (
+        <p className="load">Jeszcze chwilkę , waluty się ładują ... 😁🤑</p>
+      ) : !isLoading && failure ? (
+        <p className="load failure">
+          Przykro mi😟😕, ale coś poszło nie tak. <br /> Sprawdź czy adres jest
+          poprawny i spróbuj jeszcze raz....
+        </p>
+      ) : (
+        <MainContainer>
+          <ActualDate />
+          <Form
             exchangeRate={exchangeRate}
             tableDataFrom={tableDataFrom}
             tableDataTo={tableDataTo}
+            moneyAmount={moneyAmount}
+            handleSelectCurrencyFromChange={handleSelectCurrencyFromChange}
+            handleSelectCurrencyToChange={handleSelectCurrencyToChange}
+            handleInputMoneyChange={handleInputMoneyChange}
+            calculateResult={calculateResult}
             selectedFrom={selectedFrom}
             selectedTo={selectedTo}
-            tableBodyRows={tableBodyRows}
-            isLoading={isLoading}
-            failure={failure}
+            classNametableDataFrom={classNametableDataFrom}
+            classNametableDataTo={classNametableDataTo}
+            currencies={currencies}
+            result={result}
+            resetCalculator={resetCalculator}
           />
-        </TableContainer>
-        <p className="infoAfterLoading">
-          {!failure && !isLoading && (
-            <>
-              Kursy walut pobierane są z Europejskiego Banku Centralnego
-              <br />
-              aktualne na dzień bieżący{" "}
-              <span className="fetchedDate">{fetchedDate}</span>
-            </>
-          )}
-        </p>
-      </MainContainer>
+          <TableContainer>
+            <Table
+              handleTableDataClick={handleTableDataClick}
+              exchangeRate={exchangeRate}
+              tableDataFrom={tableDataFrom}
+              tableDataTo={tableDataTo}
+              selectedFrom={selectedFrom}
+              selectedTo={selectedTo}
+              tableBodyRows={tableBodyRows}
+            />
+          </TableContainer>
+          <InfoAfterDataLoad
+            failure={failure}
+            fetchedDate={fetchedDate}
+            isLoading={isLoading}
+          />
+        </MainContainer>
+      )}
     </div>
   );
 }
