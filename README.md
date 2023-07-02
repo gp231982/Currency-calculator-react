@@ -2,13 +2,13 @@
 
 ## Description
 
-This is a simple react currency calculator with interactions (one can select currency values from the list of options in the From component of can just click the proper tabledata field of the Table component and the actual state of the choices is marked with changed background color of active fields). Additionally one must input the amount of money he wants to check. The calculator has two buttons: calculation button to calculate the results based on delivered data from the Form and reset button to reset the application. The calculator was created with create-react-app package (refactored from currency calculator repository made in vanila js).
+This is a simple react currency calculator with interactions (one can select currency values from the list of options in the From component or can just click the proper table-data field of the Table component and the actual state of the choices is marked with changed background color of active fields). Additionally one must input the amount of money he wants to check. The calculator has two buttons: a calculation button to calculate the results based on delivered data from the Form and a reset button to reset the application. The calculator was created with the create-react-app package (refactored from the currency calculator repository made in Vanilla js). The converter is fetching the data from public API just after DOM is installed and fills the table with actual rates from European Central Bank and shows the valid date. At the time of loading the data, and in case of failure the user is informed about the actual state with a friendly message.
 
 https://gp231982.github.io/Currency-calculator-react/
 
 ## Demo
 
-https://user-images.githubusercontent.com/68773588/229276105-57642029-bac6-4e38-a44b-f1c1c489059a.mp4
+https://github.com/gp231982/Currency-calculator-react/assets/68773588/96559c08-2038-42fd-8878-86e146879a6d
 
 ## Technologies and conventions
 
@@ -16,9 +16,11 @@ https://user-images.githubusercontent.com/68773588/229276105-57642029-bac6-4e38-
 - CSS
   - Flexbox Layout
   - Transitions and Transforms
-- JavaScript
+- JavaScript and asynchronous functions
 - React and JSX syntax
-- useState, passing props down to the children
+- styled-components
+- embedded (useState, useRef, useEffect) and custom react hooks
+- passing props down to the children
 - creating interactions between state variables
 - ES6+ features:
   - let and const keywords
