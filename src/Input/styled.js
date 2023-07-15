@@ -2,16 +2,13 @@ import styled from "styled-components";
 
 export const MoneyInput = styled.input`
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   padding: 10px;
   margin-left: 0px;
   border-radius: 5px;
-  box-shadow: 2px 2px;
+  
 
   &:hover {
-    background-color: #f5e1e1;
-    outline-style: double;
-    outline-width: 5px;
-    outline-offset: 1px;
+    background-color: rgba(197, 183, 163, 0.735);
   }
 `;

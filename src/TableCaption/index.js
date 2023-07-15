@@ -1,7 +1,9 @@
 import { Caption } from "./styled";
 
 const TableCaption = () => (
-  <Caption>Kursy rynkowe walut (kliknij na komórkę Kursu)</Caption>
+  <Caption>
+    <p>Kursy rynkowe walut (kliknij na komórkę Kursu)</p>
+  </Caption>
 );
 
 export default TableCaption;

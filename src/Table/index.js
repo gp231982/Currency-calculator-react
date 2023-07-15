@@ -13,7 +13,7 @@ const Table = ({
   selectedTo,
 }) => (
   <CurrenciesAndRatesTable>
-    <TableCaption />
+    <TableCaption/>
     <TableHeader />
     <TableBody
       handleTableDataClick={handleTableDataClick}

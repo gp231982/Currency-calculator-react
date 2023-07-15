@@ -6,6 +6,7 @@ const TableBodyRowItem = ({
   item,
   handleTableDataClick,
 }) => {
+
   return (
     <>
       <Item id={item.id} selectedId={selectedFrom + "/" + selectedTo}>
